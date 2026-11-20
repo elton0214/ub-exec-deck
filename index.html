@@ -79,26 +79,62 @@
 
 .s2 .report strong .no{color:var(--ink);margin-right:.5em;font-weight:700}
 /* V12: runbook flow (slide 2) */
-.s6 .flow{position:absolute;inset:33% 5.15% 9%;display:flex;flex-direction:column;gap:2.6%}
-.s6 .fgroups,.s6 .fsteps{display:grid;grid-template-columns:repeat(8,1fr);gap:1.1%}
-.s6 .fg b{margin-right:.45em;font-size:1.25em;font-weight:700}.s6 .fg{font-size:0.858cqw;font-weight:700;letter-spacing:.06em;color:var(--blue);text-align:center;border-bottom:2px solid var(--blue);padding-bottom:1.6%}
-.s6 .fsteps{flex:0 0 auto;height:72%}
-.s6 .fstep{position:relative;background:#fff;border:1px solid var(--line);border-top:3px solid var(--blue);padding:7% 6% 5%;display:flex;flex-direction:column;gap:3%;min-width:0}
-.s6 .fstep:not(:last-child):after{content:'';position:absolute;right:-9%;top:20%;width:8px;height:8px;border-right:2px solid #8d9bab;border-top:2px solid #8d9bab;transform:rotate(45deg)}
-.s6 .fl{font-size:3.96cqw;font-weight:430;letter-spacing:-.06em;line-height:1;color:var(--blue)}
-.s6 .fstep strong{font-size:1.21cqw;line-height:1.3;font-weight:650}
-.s6 .fstep small{font-size:0.946cqw;line-height:1.45;color:var(--mute);flex:1}
-.s6 .by{font-style:normal;font-size:0.748cqw;font-weight:700;padding:3px 6px;align-self:flex-start;border-radius:2px;line-height:1.35}
-.s6 .by.bob,.s6 .by.ppz{background:var(--pale);color:#153f7a}
-.s6 .by.human{background:#f1f4f7;color:#3b4652;border:1px solid #c6d0da}
-.s6 .fstep.skipped{border-top-color:#c6d0da;background:#f1f4f7}
-.s6 .fstep.skipped .fl,.s6 .fstep.skipped strong,.s6 .fstep.skipped small{color:#a3acb5}
-.s6 .fstep.skipped .by{background:#f1f4f7;color:#a3acb5;border-color:#d8dee3}
+.slide.s6{padding:2.5% 3.8% 4.2%}
+.slide.s6.active{display:flex;flex-direction:column}
+.s6 .kicker{flex:0 0 auto;font-size:0.968cqw;font-weight:800;color:#455468}
+.s6 h2{flex:0 0 auto;margin:0.5% 0 1.2%;font-size:2.65cqw;line-height:1.2;font-weight:700;color:#101828}
+.s6 .flow{flex:1 1 0;min-height:0;position:static;display:flex;flex-direction:column;gap:1.1%}
+.s6 .ftiers,.s6 .fgroups,.s6 .fsteps{display:grid;grid-template-columns:repeat(9,1fr);gap:0.7%}
+.s6 .ftier{padding:6px 10px;border-radius:6px;font-size:1.18cqw;font-weight:850;text-align:center;letter-spacing:.02em;line-height:1.25;box-shadow:0 2px 5px rgba(0,0,0,0.06)}
+.s6 .ftier.onetime{grid-column:1/6;background:#d8e6fc;color:#002266;border:2px solid #6b9fff}
+.s6 .ftier.percr{grid-column:6/10;background:#defbe6;color:#044317;border:2px solid #56d47b}
+.s6 .fg{font-size:1.12cqw;font-weight:850;letter-spacing:.01em;color:#101828;text-align:center;border-bottom:3.5px solid #0f62fe;padding-bottom:1.5%;white-space:nowrap}
+.s6 .fg b{margin-right:.3em;font-size:1.2em;font-weight:900}
+.s6 .fg.env-group{border-bottom-color:#344054;color:#1d2939}
+.s6 .fg.percr-group{border-bottom-color:#198038;color:#0e4c25}
+.s6 .fsteps{flex:1 1 0;min-height:0;height:100%}
+.s6 .fstep{position:relative;background:#fff;border:1.5px solid #c9d5e2;border-top:4.5px solid #0f62fe;padding:5% 6% 4.5%;display:flex;flex-direction:column;gap:3px;min-width:0;box-shadow:0 3px 10px rgba(0,0,0,0.06);border-radius:0 0 4px 4px}
+.s6 .fstep.env-card{border-top-color:#344054;background:#f9fafb;border-color:#d0d5dd}
+.s6 .fstep.percr-card{border-top-color:#198038;background:#f6fcf8;border-color:#c4e3cf}
+.s6 .fstep:not(:last-child):after{content:'';position:absolute;right:-8%;top:11%;width:7px;height:7px;border-right:2.5px solid #8598ab;border-top:2.5px solid #8598ab;transform:rotate(45deg);z-index:2}
+.s6 .fl{font-size:2.05cqw;font-weight:700;letter-spacing:-.04em;line-height:1;color:#0f62fe;white-space:nowrap}
+.s6 .fstep.env-card .fl{color:#344054}
+.s6 .fstep.percr-card .fl{color:#198038}
+.s6 .fstep strong{font-size:1.144cqw;line-height:1.2;font-weight:750;margin-top:2px;color:#101828}
+.s6 .ftime-big{font-size:1.65cqw;font-weight:800;color:#1d334d;line-height:1.1;margin:3.5% 0 3%;display:flex;align-items:baseline;gap:3px}
+.s6 .ftime-big .tnum{font-size:1.65cqw;font-weight:800;color:#183250;letter-spacing:-.03em}
+.s6 .ftime-big .tunit{font-size:0.88cqw;font-weight:700;color:#4f6277}
+.s6 .fstep.env-card .ftime-big .tnum{color:#344054}
+.s6 .fstep.env-card .ftime-big .tunit{color:#667085}
+.s6 .fstep.percr-card .ftime-big .tnum{color:#094019}
+.s6 .fstep.percr-card .ftime-big .tunit{color:#1a5c2d}
+.s6 .fdoc{font-size:0.836cqw;font-weight:700;font-family:"IBM Plex Mono",Consolas,monospace;padding:3px 6px;border-radius:3px 5px 5px 3px;display:inline-flex;align-items:center;gap:4px;background:#eef4fc;color:#003494;border:1.5px solid #a6c5eb;border-left:3.5px solid #0f62fe;box-shadow:0 1px 3px rgba(0,0,0,0.06);align-self:flex-start}
+.s6 .fdoc:before{content:"📄";font-size:0.9em;line-height:1}
+.s6 .fstep.env-card .fdoc{background:#f2f4f7;color:#1d2939;border-color:#d0d5dd;border-left-color:#344054}
+.s6 .fstep.percr-card .fdoc{background:#eefbf2;color:#0e4c25;border-color:#a8e0ba;border-left-color:#198038}
+.s6 .fcoin{font-size:0.924cqw;font-weight:800;color:#854d0e;display:inline-flex;align-items:center;gap:3px;line-height:1.2;align-self:flex-start;margin:1px 0;background:transparent;border:0;padding:0}
+.s6 .fstep.env-card .fcoin{color:#475467}
+.s6 .fstep.percr-card .fcoin{color:#0e6027}
+.s6 .fstep.skipped .fcoin{color:#667085}
+.s6 .fstep small{font-size:0.88cqw;line-height:1.3;color:#283544;font-weight:550;flex:1 1 auto;margin-top:2px}
+.s6 .by{font-style:normal;font-size:0.792cqw;font-weight:750;padding:2px 5px;align-self:flex-start;border-radius:3px;line-height:1.2;margin-top:auto}
+.s6 .by.bob,.s6 .by.ppz{background:#dbe7fc;color:#002b7a;border:1px solid #99beff}
+.s6 .by.human{background:#eaeff5;color:#1f2937;border:1.5px solid #b3c2d4}
+.s6 .fstep.skipped{border-top-color:#667085;background:#f8f9fa;border-color:#d0d5dd}
+.s6 .fstep.skipped .fl{color:#475467}
+.s6 .fstep.skipped strong{color:#344054}
+.s6 .fstep.skipped small{color:#475467}
+.s6 .fstep.skipped .ftime-big .tnum{color:#344054}
+.s6 .fstep.skipped .ftime-big .tunit{color:#475467}
+.s6 .fstep.skipped .fdoc{background:#eaecf0;color:#344054;border-color:#d0d5dd;border-left-color:#667085}
+.s6 .fstep.skipped .by{background:#eaecf0;color:#344054;border-color:#d0d5dd}
 
-.s6 .flegend{margin-top:1.5%;display:flex;gap:3%;align-items:center;font-size:0.858cqw;color:var(--mute)}
-.s6 .flegend .dot{display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:2px}
-.s6 .dot.bob{background:var(--pale);border:1px solid #0f62fe}.s6 .dot.human{background:#f1f4f7;border:1px solid #8d9bab}
-.s6 .fnote{margin-left:auto}
+.s6 .flegend{flex:0 0 auto;margin-top:0.6%;display:flex;gap:2.6%;align-items:center;font-size:0.924cqw;font-weight:600;color:#2a3848}
+.s6 .flegend .dot{display:inline-block;width:11px;height:11px;margin-right:6px;border-radius:3px}
+.s6 .dot.bob{background:#dbe7fc;border:1.5px solid #0f62fe}
+.s6 .dot.human{background:#eaeff5;border:1.5px solid #6b7d91}
+.s6 .dot.percr{background:#defbe6;border:1.5px solid #198038}
+.s6 .fnote{margin-left:auto;font-weight:700;color:#0043ce}
 
 /* V16: concrete example (slide 5) - glossary + flow + git diff */
 .s7 .exwrap{position:absolute;inset:32% 5.15% 9%;display:grid;grid-template-columns:37% minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:3.2% 2.4%}
@@ -126,88 +162,203 @@
 .s7 .gl.del mark{background:#ffc2c9;color:#8a1f2b}.s7 .gl.add mark{background:#a9e2b9;color:#0f4d22}
 
 /* V17: presentation-grade type scale (1920x1080: body>=16px, labels>=14px) */
-.kicker{font-size:0.902cqw}
+.kicker{font-size:0.92cqw}
 .decksub{font-size:1.265cqw}
-.fine{font-size:0.935cqw}
+.fine{font-size:0.968cqw}
 .foot{font-size:0.88cqw}
 .s1 .desc{font-size:1.265cqw;max-width:520px}
-.s1 .hero-label{font-size:0.858cqw}
-/* slide 2 (runbook) */
-.s6 .fg{font-size:1.045cqw}
-.s6 .fstep strong{font-size:1.21cqw}
-.s6 .fstep small{font-size:0.99cqw}
-.s6 .by{font-size:0.803cqw}
-.s6 .flegend{font-size:0.968cqw}
+.s1 .hero-label{font-size:0.88cqw}
+/* slide 2 (runbook handled above) */
 /* slide 3 (POC evidence) */
-.s2 .vlabel{font-size:0.858cqw}
-.s2 .in .tiny{font-size:0.858cqw}
-.s2 .bridge .daynote{font-size:0.803cqw}
-.s2 .report strong{font-size:1.144cqw}
-.s2 .report small{font-size:0.913cqw}
-.s2 .outfoot{font-size:1.144cqw}
-.s2 .softfoot{font-size:0.803cqw}
+.s2 .vlabel{font-size:0.902cqw}
+.s2 .in .tiny{font-size:0.935cqw}
+.s2 .bridge .daynote{font-size:0.88cqw}
+.s2 .report strong{font-size:1.166cqw}
+.s2 .report small{font-size:0.968cqw}
+.s2 .outfoot{font-size:1.166cqw}
+.s2 .softfoot{font-size:0.88cqw}
 /* slide 4 (capability) */
 .s3 .tag{font-size:0.968cqw}
 /* slide 5 (example) */
 .s7 .ph,.s7 .gdh{font-size:0.935cqw}
-.s7 .gt .hd{font-size:0.88cqw}
-.s7 .gt code{font-size:1.045cqw}
-.s7 .gt .b{font-size:1.1cqw}
-.s7 .gdh .f{font-size:0.99cqw}
-.s7 .gl{font-size:1.078cqw;line-height:1.7}
+.s7 .gt .hd{font-size:0.902cqw}
+.s7 .gt code{font-size:1.06cqw}
+.s7 .gt .b{font-size:1.12cqw}
+.s7 .gdh .f{font-size:1.02cqw}
+.s7 .gl{font-size:1.12cqw;line-height:1.75}
 /* slide 6 (decision lens) */
-.s4 .aside .smalllabel{font-size:0.935cqw}
+.s4 .aside .smalllabel{font-size:0.968cqw}
 .s4 .aside .lead{font-size:2.2cqw}
 .s4 .map text[font-size="27"]{font-size:33px}
-.stage:fullscreen{background:#e7eaed;padding:0}.stage:fullscreen .deck{width:min(100vw,calc(100vh*1.77778))}</style></head><body><main class="stage"><div class="deck" id="deck">
+/* V18: slide 3 — CR as same client input; concrete outputs; stage time/coin */
+.s2 .in .inrow{display:flex;align-items:center;justify-content:center;gap:3%;margin-top:2%}
+.s2 .in .inrow .large{font-size:4.2cqw;text-align:left}
+.s2 .in .plus{font-size:2.4cqw;font-weight:300;color:var(--mute);line-height:1}
+.s2 .in .crdoc{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:.6cqw .9cqw;background:#fff;border:1px solid #d8dee3;border-left:4px solid #198038;color:var(--ink);text-decoration:none}
+.s2 .in .crdoc .pdfb{font-size:.77cqw;font-weight:700;letter-spacing:.08em;color:#fff;background:#198038;padding:1px 6px;border-radius:2px}
+.s2 .in .crdoc b{font-size:1.3cqw;font-weight:700;letter-spacing:-.02em;margin-top:2px;color:var(--ink)}
+.s2 .in .crdoc i{font-style:normal;font-size:.77cqw;color:var(--mute)}
+.s2 .report,.s2 .report:nth-child(3){grid-template-columns:22% minmax(0,1fr);align-items:start;gap:3%}
+.s2 .report img{max-height:70px}
+.s2 .report section{min-width:0}
+.s2 .outs{list-style:none;margin:2.5% 0 0;padding:0;font-size:.84cqw;line-height:1.4;color:#2b3745}
+.s2 .outs li{position:relative;padding-left:.9em}
+.s2 .outs li:before{content:"▸";position:absolute;left:0;color:var(--blue)}
+.s2 .outs b{color:var(--ink);font-weight:700}
+.s2 .st{display:flex;align-items:baseline;gap:.3cqw;white-space:nowrap;margin-top:1.5%}
+.s2 .st .sl{font-size:.8cqw;font-weight:700;color:#0f62fe;margin-right:.2cqw}
+.s2 .st .tnum{font-size:1.4cqw;font-weight:800;color:#183250;letter-spacing:-.03em;line-height:1}
+.s2 .st .tunit{font-size:.8cqw;font-weight:700;color:#4f6277}
+.s2 .st .coin{margin-left:.5cqw;font-size:.88cqw;font-weight:800;color:#854d0e}
+.s2 .st.pc .sl{color:#198038}.s2 .st.pc .tnum{color:#094019}.s2 .st.pc .tunit{color:#1a5c2d}.s2 .st.pc .coin{color:#0e6027}
+
+/* V19: slide 3 — subtle one-time vs per-CR hint */
+.s2 .reportgrid .report.once{border-top:2px solid #a6c5eb}
+.s2 .reportgrid .report.each{border-top:2px solid #a8e0ba}
+.s2 .report .ot{font-style:normal;font-size:.72cqw;font-weight:700;letter-spacing:.04em;margin-left:.7cqw;padding:1px .45cqw;border-radius:2px;vertical-align:middle;color:#2f5fb3;background:#eaf1fd;border:1px solid #c9dbf7}
+.s2 .report .ot.pc{color:#0e4c25;background:#eefbf2;border-color:#a8e0ba}/* V20: slide 3 — two blocks (one-time / per-CR) */
+.s2 .reportgrid{grid-template-columns:1fr;gap:0}
+.s2 .report,.s2 .report:nth-child(3){grid-template-columns:13% minmax(0,1fr);align-items:center;gap:3%;padding:2% 0}
+.s2 .report img{max-height:110px}
+.s2 .report .hd{display:flex;justify-content:space-between;align-items:baseline;gap:2cqw}
+.s2 .report .hd strong{font-size:1.45cqw}
+.s2 .report .sub{font-style:normal;font-size:.88cqw;font-weight:500;color:var(--mute);margin-left:1cqw;letter-spacing:0}
+.s2 .report .hd .st{margin-top:0;flex:0 0 auto}
+.s2 .report .st .tnum{font-size:1.6cqw}
+.s2 .report .outs{column-count:2;column-gap:2.4cqw;font-size:.95cqw;line-height:1.5;margin-top:1.5%}
+.s2 .report .outs li{break-inside:avoid}.stage:fullscreen{background:#e7eaed;padding:0}.stage:fullscreen .deck{width:min(100vw,calc(100vh*1.77778))}</style></head><body><main class="stage"><div class="deck" id="deck">
 <section class="slide s1 active">
 <div class="kicker">01 / IBM BOB + PREMIUM PACKAGE FOR Z　<strong>／ STRATEGIC VALUE</strong></div><h1>銀行需要的，不只是會寫程式的 AI。<br/>而是<span class="blue">看得懂主機變更脈絡</span>的能力。</h1>
 <div class="art"><div><div class="kicker">THE STRATEGIC SHIFT</div><div class="msg">讓專家經驗，<br/>擁有更完整的<br/><span class="blue">分析視野。</span></div><div class="desc">系統化追查交給 Bob + PPZ；關鍵判斷、程式審閱與主機驗證，仍由銀行團隊掌握。</div></div><div class="hero"><img alt="PPZ 工程師與高科技箱" src="images/img-01.png"/><div class="hero-label">BOB + PREMIUM PACKAGE FOR Z</div></div></div><div class="foot"><span>01 ／ 07</span></div></section>
 <section class="slide s6">
-<div class="kicker">02 / RUNBOOK F → M</div>
-<h2>從 CR（會辦單）到主機測試，<br/>是一條<span class="blue">有順序、有把關的流程。</span></h2>
-<p class="decksub">Runbook 步驟 F → M：完成一個階段，才進入下一個階段；核准、審閱與主機測試由人負責。</p>
+<div class="kicker">02 / RUNBOOK A → M ｜ FULL DELIVERY & CR LIFECYCLE</div>
+<h2>Dive. 從環境準備、資產建庫，<br/>到<span class="blue">每次 CR 的標準化分析與驗證。</span></h2>
 <div class="flow">
-<div class="fgroups"><div class="fg" style="grid-column:1/3"><b>1</b>資產與相依性</div><div class="fg" style="grid-column:3/5"><b>2</b>程式理解文件</div><div class="fg" style="grid-column:5/6"><b>3</b>影響分析</div><div class="fg" style="grid-column:6/9"><b>4</b>修改與驗證交接</div></div>
+<div class="ftiers">
+<div class="ftier onetime">一次性 基礎建置 / 模組資產</div>
+<div class="ftier percr">每次 CR 變更循環</div>
+</div>
+<div class="fgroups">
+<div class="fg env-group" style="grid-column:1/2"><b>0</b>環境準備</div>
+<div class="fg" style="grid-column:2/4"><b>1</b>資產與相依性</div>
+<div class="fg" style="grid-column:4/6"><b>2</b>程式理解文件</div>
+<div class="fg percr-group" style="grid-column:6/7"><b>3</b>影響分析</div>
+<div class="fg percr-group" style="grid-column:7/10"><b>4</b>修改與驗證交接</div>
+</div>
 <div class="fsteps">
-<div class="fstep"><div class="fl">F</div><strong>交付完整性檢查</strong><small>檔案、相依與缺漏稽核</small><em class="by bob">Bob</em></div>
-<div class="fstep"><div class="fl">G</div><strong>掃描建庫</strong><small>建立可查詢的分析資料庫</small><em class="by ppz">PPZ</em></div>
-<div class="fstep"><div class="fl">H</div><strong>資料字典</strong><small>欄位轉成業務語意</small><em class="by ppz">PPZ ＋ BIZ 簽核</em></div>
-<div class="fstep"><div class="fl">I</div><strong>流程分析與文件</strong><small>程式邏輯與業務規則</small><em class="by ppz">PPZ ＋ DEV 核對</em></div>
-<div class="fstep"><div class="fl">J</div><strong>影響分析</strong><small>列出牽動的程式與風險</small><em class="by ppz">PPZ ＋ 人工回答</em></div>
-<div class="fstep"><div class="fl">K</div><strong>實施計畫</strong><small>範圍、測試與回退</small><em class="by human">核准後才可修改</em></div>
-<div class="fstep"><div class="fl">L</div><strong>程式修改</strong><small>產生修改與 Diff</small><em class="by human">DEV 逐行審閱</em></div>
-<div class="fstep skipped"><div class="fl">M</div><strong>主機編譯與測試</strong><small>實際驗證結果</small><em class="by human">MF 執行</em></div>
+<div class="fstep env-card">
+<span class="fl">A–E</span>
+<strong>環境準備</strong>
+<div class="ftime-big"><span class="tnum">40</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 15</span>
+<span class="fdoc">00-env.md</span>
+<small>核可、網路白名單、安裝、E：環境操作手冊實例化</small>
+<em class="by human">SEC/NET</em>
 </div>
-<div class="flegend"><span><i class="dot bob"></i>Bob／PPZ 協助分析</span><span><i class="dot human"></i>人工把關</span></div>
+<div class="fstep">
+<span class="fl">F</span>
+<strong>完整性檢查</strong>
+<div class="ftime-big"><span class="tnum">42</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 27</span>
+<span class="fdoc">00-manifest.md</span>
+<small>盤點 1,265 檔與邊界</small>
+<em class="by bob">Bob 盤點</em>
 </div>
-<div class="foot"><span>依 Runbook 步驟卡 F–M 整理；A–E 為啟動準備</span><span>02 ／ 07</span></div>
+<div class="fstep">
+<span class="fl">G</span>
+<strong>掃描建庫</strong>
+<div class="ftime-big"><span class="tnum">42</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 10</span>
+<span class="fdoc">01-scan.db</span>
+<small>建立分析資料庫與呼叫圖</small>
+<em class="by ppz">PPZ 建庫</em>
+</div>
+<div class="fstep">
+<span class="fl">H</span>
+<strong>資料字典</strong>
+<div class="ftime-big"><span class="tnum">20</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 10</span>
+<span class="fdoc">02-dict.json</span>
+<small>30 筆欄位轉業務語意</small>
+<em class="by ppz">PPZ＋BIZ</em>
+</div>
+<div class="fstep">
+<span class="fl">I</span>
+<strong>程式文件</strong>
+<div class="ftime-big"><span class="tnum">26</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 19</span>
+<span class="fdoc">03-explain.md</span>
+<small>兩支核心程式現況與邏輯</small>
+<em class="by ppz">PPZ＋DEV</em>
+</div>
+<div class="fstep percr-card">
+<span class="fl">J</span>
+<strong>影響分析</strong>
+<div class="ftime-big"><span class="tnum">38</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 22</span>
+<span class="fdoc">04-impact.md</span>
+<small>時點流向與疑似漏改</small>
+<em class="by ppz">PPZ＋DEV</em>
+</div>
+<div class="fstep percr-card">
+<span class="fl">K</span>
+<strong>實施計畫</strong>
+<div class="ftime-big"><span class="tnum">19</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 7</span>
+<span class="fdoc">05-plan.md</span>
+<small>修改範圍與測試策略</small>
+<em class="by human">核准後修改</em>
+</div>
+<div class="fstep percr-card">
+<span class="fl">L</span>
+<strong>程式修改</strong>
+<div class="ftime-big"><span class="tnum">40</span><span class="tunit">分</span></div>
+<span class="fcoin">🪙 12</span>
+<span class="fdoc">06-review.md</span>
+<small>1 行建議修改與 Diff 審查</small>
+<em class="by human">DEV 逐行審</em>
+</div>
+<div class="fstep percr-card skipped">
+<span class="fl">M</span>
+<strong>主機測試</strong>
+<div class="ftime-big"><span class="tnum">MF</span><span class="tunit">排程</span></div>
+<span class="fcoin">🪙 0</span>
+<span class="fdoc">07-test.md</span>
+<small>主機編譯與 14:00 驗證</small>
+<em class="by human">MF 執行</em>
+</div>
+</div>
+<div class="flegend">
+<span><i class="dot bob"></i>Bob / PPZ 自動分析</span>
+<span><i class="dot human"></i>人工把關 / 簽核</span>
+<span><i class="dot percr"></i>每次 CR 必走階段 (J–M)</span>
+<span class="fnote">現場 POC 實耗：核心任務 112 🪙（兩日總額 167 🪙）</span>
+</div>
+</div>
+<div class="foot"><span>依 Runbook 步驟卡 A–M 整理；Phase 0 為環境準備，Phase 1–2 為資產基底（一次性），Phase 3–4 為每次 CR 循環</span><span>02 ／ 07</span></div>
 </section>
 
 <section class="slide s2">
 <div class="kicker">03 / POC EVIDENCE</div>
-<h2>從一張 CR、凌亂的程式碼，<br/>到<span class="blue">工程師可以審閱的工作成果。</span></h2>
+<h2>Discover. 從一張 CR、凌亂的程式碼，<br/>到<span class="blue">工程師可以審閱的工作成果。</span></h2>
 <p class="decksub">聯邦銀行實際案例｜<span class="blue">MICR 二次扣帳批次時點調整</span>：輸入並不完美，分析仍可依照既定步驟推進。</p>
 <div class="transform">
-<div class="in"><div class="vlabel">WHAT WE RECEIVED</div><div class="pile"><img alt="河狸整理散亂積木及 CR" src="images/img-02.png"/></div><div class="large">1,265</div><div class="tiny">份交付檔案 · COBOL / Copybook / JCL / HLASM</div></div>
-<div class="bridge"><div class="vlabel" style="font-size:10px;text-align:center">RUNBOOK<br/>F → L</div><div class="chev"></div><div class="day">約 1 天</div><div class="daynote">現場工作經驗<br/>非計時驗證</div></div>
+<div class="in"><div class="vlabel">WHAT WE RECEIVED</div><div class="pile"><img alt="河狸整理散亂積木及 CR" src="images/img-02.png"/></div><div class="inrow"><div class="large">1,265</div><div class="plus">+</div><a class="crdoc" href="reference/CR-202409250927.pdf" rel="noopener" target="_blank"><span class="pdfb">PDF</span><b>1 張 CR</b><i>MICR 二次扣帳：14:30 → 14:00</i></a></div><div class="tiny">份交付檔案 · COBOL / Copybook / JCL / HLASM</div></div>
+<div class="bridge"><div class="vlabel" style="text-align:center">RUNBOOK<br/>F → L</div><div class="chev"></div><div class="day">約8小時</div><div class="daynote">現場工作經驗<br/>非計時驗證</div></div>
 <div class="out"><div class="vlabel">WHAT THE TEAM CAN REVIEW</div><div class="outtitle">從未整理的資產，<br/>形成<span class="blue">有依據的工作底稿。</span></div>
 <div class="reportgrid">
-<div class="report"><img alt="" src="images/img-03.png"/><section><strong><b class="no">1</b>資產與相依性</strong><small>交付完整性、建庫與追查邊界</small></section></div>
-<div class="report"><img alt="" src="images/img-04.png"/><section><strong><b class="no">2</b>程式理解文件</strong><small>資料字典、程式文件與流程脈絡</small></section></div>
-<div class="report"><img alt="" src="images/img-05.png"/><section><strong><b class="no">3</b>影響分析</strong><small>CR 指定 2 支 → 核心 5 支；關聯追查約 56 支*</small></section></div>
-<div class="report"><img alt="" src="images/img-06.png"/><section><strong><b class="no">4</b>修改與驗證交接</strong><small>現場回報產生計畫及修改；待 Diff 與主機驗證</small></section></div>
+<div class="report once"><img alt="" src="images/img-03.png"/><section><div class="hd"><strong>一次性建置<em class="sub">資產與相依性 · 程式理解文件</em></strong><div class="st"><span class="sl">F–I</span><span class="tnum">130</span><span class="tunit">分鐘</span><span class="coin">🪙 66</span></div></div>
+<ul class="outs"><li><b>完整性檢查報告</b>（1,265 檔盤點）</li><li><b>435 項</b>缺漏 Mock 登記表</li><li><b>5 支</b>程式掃描資料庫</li><li><b>30 筆</b>業務詞彙表</li><li><b>2 支</b>程式說明書</li><li><b>2 張</b>邏輯流程圖</li></ul></section></div>
+<div class="report each"><img alt="" src="images/img-05.png"/><section><div class="hd"><strong>每次 CR<em class="sub">影響分析 · 修改與驗證交接</em></strong><div class="st pc"><span class="sl">J–L</span><span class="tnum">97</span><span class="tunit">分鐘</span><span class="coin">🪙 41</span></div></div>
+<ul class="outs"><li><b>影響分析報告</b>＋<b>5 張</b>關聯流程圖</li><li><b>9 項</b>風險 · <b>1 處</b>疑似漏改</li><li><b>實施計畫</b>＋<b>1 張</b>流程圖（27 項測試）</li><li><b>1 行</b> Diff 審查記錄</li></ul></section></div>
 </div><div class="outfoot">同時標示<span class="blue">依據與待確認範圍。</span></div>
-<div class="softfoot">* 非全部建庫；實際建庫 5 支，關聯範圍 56 支。</div></div>
+<div class="softfoot">時間／🪙 為第 2 頁 Runbook 各步驟實耗加總（一次性 F–I、每次 CR J–L）；流程圖共 8 張。</div></div>
 </div>
 <div class="foot"><span>一次 POC 的現場經驗 · F–J 文件初稿／K–L 依現場回報／M 尚待主機測試</span><span>03 ／ 07</span></div>
 </section>
-<section class="slide s3">
-<div class="kicker">04 / A CAPABILITY WORTH OWNING　<strong>／ OPERATIONAL FUTURE</strong></div><h2>讓每一次主機變更，<br/>都有<span class="blue">可以重複使用的分析起點。</span></h2><p class="decksub">分析產出交由專家審閱，保留既有治理與測試責任。</p>
-<div class="art"><div class="diagram"><svg class="svg" viewbox="0 0 760 384"><defs><marker id="arrow" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0 0L8 4L0 8Z" fill="#0f62fe"></path></marker></defs><g><rect fill="#fff" height="258" rx="4" stroke="#d3dae1" stroke-width="1.5" width="214" x="10" y="62"></rect><text fill="#1b2938" font-size="16" font-weight="650" x="30" y="94">Start Workflow</text><path d="M10 110H224" stroke="#e3e8ed"></path><text fill="#7b8792" font-size="10.5" font-weight="600" letter-spacing="1.2" x="30" y="134">SELECT A TASK</text><rect fill="#edf3ff" height="48" width="194" x="20" y="148"></rect><rect fill="#0f62fe" height="48" width="3" x="20" y="148"></rect><text fill="#0f62fe" font-size="17" font-weight="650" x="38" y="178">資料字典</text><path d="M196 166l6 6-6 6" fill="none" stroke="#0f62fe" stroke-width="2"></path><path d="M30 202H214" stroke="#e8ecf0"></path><text fill="#27333d" font-size="17" x="38" y="232">程式文件</text><path d="M196 220l6 6-6 6" fill="none" stroke="#9aa6b2" stroke-width="2"></path><path d="M30 256H214" stroke="#e8ecf0"></path><text fill="#27333d" font-size="17" x="38" y="286">影響分析</text><path d="M196 274l6 6-6 6" fill="none" stroke="#9aa6b2" stroke-width="2"></path></g><path d="M236 191H274" marker-end="url(#arrow)" stroke="#0f62fe" stroke-width="3"></path><g><rect fill="#f2f6fc" height="362" rx="5" stroke="#9eb4d0" stroke-width="1.6" width="280" x="286" y="10"></rect><path d="M286 38H566" stroke="#b9cbe0"></path><circle cx="300" cy="24" fill="#0f62fe" r="3.5"></circle><circle cx="312" cy="24" fill="#9eb4d0" r="3.5"></circle><text fill="#1b2938" font-size="14" font-weight="650" x="326" y="29">工作成果</text><text fill="#7b8792" font-size="10" letter-spacing="1" text-anchor="end" x="554" y="28">ANALYSIS OUTPUT</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="48"></rect><image height="72" href="images/doc-02.png" width="56" x="308" y="61"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="61"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="92">資料字典</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="116">DL-02-data-dictionary</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="156"></rect><image height="72" href="images/doc-03.png" width="56" x="308" y="169"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="169"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="200">程式文件</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="224">DL-03-UCPAUTO-explanation</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="264"></rect><image height="72" href="images/doc-04.png" width="56" x="308" y="277"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="277"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="308">影響分析</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="332">DL-04-impact-analysis</text></g><path d="M578 191H616" marker-end="url(#arrow)" stroke="#0f62fe" stroke-width="3"></path><g><image height="110" href="images/img-07.png" width="110" x="634" y="76"/><rect fill="#fff" height="46" stroke="#c6d0da" width="124" x="627" y="198"></rect><text fill="#1b2938" font-size="18" font-weight="650" text-anchor="middle" x="689" y="228">專家審閱</text><text fill="#66707b" font-size="14" text-anchor="middle" x="689" y="266">AP/SP/SEC/BIZ</text><text fill="#66707b" font-size="14" text-anchor="middle" x="689" y="286">核可 · 測試</text></g></svg></div><div class="impact"><div class="tag">THE LONG-TERM OPPORTUNITY</div><div class="idea">不是每次都<br/>重複摸索。<br/><span class="blue">從既有 PPZ Workflow<br/>直接開始。</span></div></div></div><div class="foot"><span>04 ／ 07</span></div></section>
 <section class="slide s7">
-<div class="kicker">05 / A CONCRETE EXAMPLE</div>
-<h2>實際工作成果：<br/>從欄位語意，到<span class="blue">疑似漏改。</span></h2>
+<div class="kicker">04 / A CONCRETE EXAMPLE</div>
+<h2>Spot. 實際工作成果：<br/>從欄位語意，到<span class="blue">疑似漏改。</span></h2>
 <p class="decksub">CR 列了 2 支程式；分析沿著時點流向，另外找出 1 支疑似漏改，並提出 1 行建議修改。</p>
 <div class="exwrap">
 <div class="pane"><div class="ph"><span class="tag">DL-02 ｜ 資料字典</span><span>共 30 筆欄位</span></div>
@@ -237,12 +388,15 @@
 <div class="gd"><div class="gdh"><span><span class="tag">DL-06 ｜ 建議修改</span><span class="f">UCPCKOB.cbl</span></span></div>
 <div class="gl del"><span class="n">474</span><span class="s">−</span><span>AND  NPMICR-TXN-TIME (1:4)  NOT &lt;  <mark>1430</mark></span></div>
 <div class="gl add"><span class="n">474</span><span class="s">+</span><span>AND  NPMICR-TXN-TIME (1:4)  NOT &lt;  <mark>1400</mark></span></div></div>
-</div><div class="foot"><span>若 CKOB 實際跑的是 UCPCKOB，14:00–14:29 會出現「不報錯、也不補錢」的空窗；圖中 3 支程式的時點各自寫死，建議抽成共用常數</span><span>05 ／ 07</span></div>
+</div><div class="foot"><span>若 CKOB 實際跑的是 UCPCKOB，14:00–14:29 會出現「不報錯、也不補錢」的空窗；圖中 3 支程式的時點各自寫死，建議抽成共用常數</span><span>04 ／ 07</span></div>
 </section>
+<section class="slide s3">
+<div class="kicker">05 / A CAPABILITY WORTH OWNING　<strong>／ OPERATIONAL FUTURE</strong></div><h2>Simplify. 讓每一次主機變更，<br/>都有<span class="blue">可以重複使用的分析起點。</span></h2><p class="decksub">分析產出交由專家審閱，保留既有治理與測試責任。</p>
+<div class="art"><div class="diagram"><svg class="svg" viewbox="0 0 760 384"><defs><marker id="arrow" markerheight="8" markerwidth="8" orient="auto" refx="7" refy="4"><path d="M0 0L8 4L0 8Z" fill="#0f62fe"></path></marker></defs><g><rect fill="#fff" height="258" rx="4" stroke="#d3dae1" stroke-width="1.5" width="214" x="10" y="62"></rect><text fill="#1b2938" font-size="16" font-weight="650" x="30" y="94">Start Workflow</text><path d="M10 110H224" stroke="#e3e8ed"></path><text fill="#7b8792" font-size="10.5" font-weight="600" letter-spacing="1.2" x="30" y="134">SELECT A TASK</text><rect fill="#edf3ff" height="48" width="194" x="20" y="148"></rect><rect fill="#0f62fe" height="48" width="3" x="20" y="148"></rect><text fill="#0f62fe" font-size="17" font-weight="650" x="38" y="178">資料字典</text><path d="M196 166l6 6-6 6" fill="none" stroke="#0f62fe" stroke-width="2"></path><path d="M30 202H214" stroke="#e8ecf0"></path><text fill="#27333d" font-size="17" x="38" y="232">程式文件</text><path d="M196 220l6 6-6 6" fill="none" stroke="#9aa6b2" stroke-width="2"></path><path d="M30 256H214" stroke="#e8ecf0"></path><text fill="#27333d" font-size="17" x="38" y="286">影響分析</text><path d="M196 274l6 6-6 6" fill="none" stroke="#9aa6b2" stroke-width="2"></path></g><path d="M236 191H274" marker-end="url(#arrow)" stroke="#0f62fe" stroke-width="3"></path><g><rect fill="#f2f6fc" height="362" rx="5" stroke="#9eb4d0" stroke-width="1.6" width="280" x="286" y="10"></rect><path d="M286 38H566" stroke="#b9cbe0"></path><circle cx="300" cy="24" fill="#0f62fe" r="3.5"></circle><circle cx="312" cy="24" fill="#9eb4d0" r="3.5"></circle><text fill="#1b2938" font-size="14" font-weight="650" x="326" y="29">工作成果</text><text fill="#7b8792" font-size="10" letter-spacing="1" text-anchor="end" x="554" y="28">ANALYSIS OUTPUT</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="48"></rect><image height="72" href="images/doc-02.png" width="56" x="308" y="61"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="61"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="92">資料字典</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="116">DL-02-data-dictionary</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="156"></rect><image height="72" href="images/doc-03.png" width="56" x="308" y="169"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="169"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="200">程式文件</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="224">DL-03-UCPAUTO-explanation</text><rect fill="#fff" height="98" rx="3" stroke="#c6d0da" width="260" x="296" y="264"></rect><image height="72" href="images/doc-04.png" width="56" x="308" y="277"/><rect fill="none" height="72" stroke="#c6d0da" stroke-width=".8" width="56" x="308" y="277"></rect><text fill="#1b2938" font-size="17" font-weight="650" x="382" y="308">影響分析</text><text fill="#66707b" font-family="Consolas,monospace" font-size="10.5" x="382" y="332">DL-04-impact-analysis</text></g><path d="M578 191H616" marker-end="url(#arrow)" stroke="#0f62fe" stroke-width="3"></path><g><image height="110" href="images/img-07.png" width="110" x="634" y="76"/><rect fill="#fff" height="46" stroke="#c6d0da" width="124" x="627" y="198"></rect><text fill="#1b2938" font-size="18" font-weight="650" text-anchor="middle" x="689" y="228">專家審閱</text><text fill="#66707b" font-size="14" text-anchor="middle" x="689" y="266">AP/SP/SEC/BIZ</text><text fill="#66707b" font-size="14" text-anchor="middle" x="689" y="286">核可 · 測試</text></g></svg></div><div class="impact"><div class="tag">THE LONG-TERM OPPORTUNITY</div><div class="idea">不是每次都<br/>重複摸索。<br/><span class="blue">從既有 PPZ Workflow<br/>直接開始。</span></div></div></div><div class="foot"><span>05 ／ 07</span></div></section>
 
 <section class="slide s4">
 <div class="kicker">06 / EXECUTIVE CONFIDENCE · DECISION LENS</div>
-<h2>讓變革更有底氣，<br/>讓治理<span class="blue">更有依據。</span></h2>
+<h2>Govern. 讓變革更有底氣，<br/>讓治理<span class="blue">更有依據。</span></h2>
 <div class="art"><div class="map"><svg aria-label="銀行高層評估長期投資時的五個面向：營運韌性、治理與驗證、投資效益、資安權限、人才傳承。中央是穩健營運、持續進化的雙重使命，而非產品功能。" class="svg" role="img" viewbox="0 0 850 465">
 <defs><pattern height="24" id="s4dots" patternunits="userSpaceOnUse" width="24"><circle cx="1" cy="1" fill="#e6eaee" r="1.1"></circle></pattern></defs>
 <rect fill="url(#s4dots)" height="465" width="850"></rect>
@@ -250,11 +404,11 @@
 <circle cx="425" cy="218" fill="#e8f0ff" r="103" stroke="#0f62fe" stroke-width="2.6"></circle><circle cx="425" cy="218" fill="#fff" opacity=".76" r="92"></circle>
 <text fill="#183451" font-size="27" font-weight="700" text-anchor="middle" x="425" y="214">穩健營運</text>
 <text fill="#0f62fe" font-size="27" font-weight="700" text-anchor="middle" x="425" y="247">持續進化</text>
-<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="54" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="179" y="78">營運韌性</text><text fill="#3b4d63" font-size="14.5" text-anchor="middle" x="179" y="103">衝擊提早掌握，變更自信推進</text><text fill="#0f62fe" font-size="12" font-weight="650" text-anchor="middle" x="179" y="127">自信面對法規與資安急件</text></g>
-<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="546" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="671" y="78">治理與驗證</text><text fill="#3b4d63" font-size="14.5" text-anchor="middle" x="671" y="103">流程可查證，責任有把關</text><text fill="#0f62fe" font-size="12" font-weight="650" text-anchor="middle" x="671" y="127">1 行 Diff 建議 · 專家人工審閱</text></g>
-<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="14" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="139" y="310">投資效益</text><text fill="#66707b" font-size="14.5" text-anchor="middle" x="139" y="335">效益與成本可以衡量</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="139" y="359">POC 實耗 167 Bobcoin</text></g>
-<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="586" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="711" y="310">資安與權限</text><text fill="#66707b" font-size="14.5" text-anchor="middle" x="711" y="335">資料與責任可以管控</text><text fill="#0f62fe" font-size="11.5" font-weight="650" text-anchor="middle" x="711" y="359">.bobignore 隔離機密 · 推論片段零保留不訓練</text></g>
-<g><rect fill="#fff" height="90" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="280" x="285" y="368"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="425" y="396">人才與知識</text><text fill="#66707b" font-size="14.5" text-anchor="middle" x="425" y="420">人才升級，知識留存</text><text fill="#0f62fe" font-size="12" font-weight="650" text-anchor="middle" x="425" y="443">30 筆業務資料字典 & 多張流程圖</text></g>
+<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="54" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="179" y="78">營運韌性</text><text fill="#3b4d63" font-size="15" text-anchor="middle" x="179" y="103">衝擊提早掌握，變更自信推進</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="179" y="127">自信面對法規與資安急件</text></g>
+<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="546" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="671" y="78">治理與驗證</text><text fill="#3b4d63" font-size="15" text-anchor="middle" x="671" y="103">流程可查證，責任有把關</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="671" y="127">1 行 Diff 建議 · 專家人工審閱</text></g>
+<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="14" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="139" y="310">投資效益</text><text fill="#66707b" font-size="15" text-anchor="middle" x="139" y="335">效益與成本可以衡量</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="139" y="359">POC 實耗 167 Bobcoin</text></g>
+<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="586" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="711" y="310">資安與權限</text><text fill="#66707b" font-size="15" text-anchor="middle" x="711" y="335">資料與責任可以管控</text><text fill="#0f62fe" font-size="12.5" font-weight="650" text-anchor="middle" x="711" y="359">.bobignore 隔離機密 · 推論片段零保留不訓練</text></g>
+<g><rect fill="#fff" height="90" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="280" x="285" y="368"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="425" y="396">人才與知識</text><text fill="#66707b" font-size="15" text-anchor="middle" x="425" y="420">人才升級，知識留存</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="425" y="443">30 筆業務資料字典 & 多張流程圖</text></g>
 </svg></div><div class="aside"><div class="smalllabel">A MORE CONFIDENT DECISION</div><div class="lead">不只看到效率。<br/><span class="blue">更看見風險、<br/>責任與長期價值。</span></div></div></div>
 <div class="foot"><span>06 ／ 07</span></div>
 </section>
