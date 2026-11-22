@@ -13,7 +13,7 @@ Mental Model (講者備忘錄) ｜ S 情境 → C 衝突 → R 解方
 So what? → Why now? → Why us?
 金管會方向 → 對銀行管理要求的合理推演 → 時間壓力 → 現有 CR gap → PPZ value
 [R] P7 Own：客戶自己用、好上手，人工把關
-[R] P8 Govern：回應高階顧慮；人才升級 = biz + IT 同一人
+[R] P8 Wrap up
 [R] P9 Imagine：穩守核心，也探索機會（像 Snoopy 安穩 / 探索）
     - L1 Change 更快更安全 ｜ L2 Experiment 低成本試錯（新定價）｜ L3 Compose 帳單/支付/信用卡開 API
     - L4 Ecosystem Fintech/Partner 安全使用 ｜ L5 Biz Model 成為 game changer

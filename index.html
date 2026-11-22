@@ -58,12 +58,32 @@
 .s2 .bridge .daynote{font-size:0.748cqw}
 .s2 .vlabel{font-size:0.814cqw}
 
-.s4 .art{position:absolute;inset:27% 5.15% 11%;display:grid;grid-template-columns:69% 31%;gap:2.5%;align-items:stretch}
-.s4 .map{border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
-.s4 .aside{border-left:1px solid var(--line);padding-left:7%;display:flex;flex-direction:column;justify-content:center;gap:7%}
-.s4 .aside .lead{font-size:2.2cqw;font-weight:600;letter-spacing:-.04em;line-height:1.45}
-.s4 .aside .bodycopy{font-size:1.034cqw;line-height:1.75;color:var(--mute)}
-.s4 .aside .smalllabel{font-size:0.858cqw;letter-spacing:.11em;color:var(--blue);font-weight:700}
+.s4 .art{position:absolute;inset:27% 5.15% 8.5%;display:grid;grid-template-columns:68% 32%;gap:4%;align-items:stretch}
+.s4 .evidence-stage{display:flex;flex-direction:column;justify-content:space-between;gap:2.5%;min-width:0}
+.s4 .hero-row{display:grid;grid-template-columns:1fr 1fr;gap:4%;align-items:flex-start;padding-bottom:2.5%;border-bottom:1.5px solid var(--line)}
+.s4 .hero-item{display:flex;flex-direction:column}
+.s4 .hero-kicker{font-size:1.6cqw;font-weight:850;color:var(--ink);letter-spacing:0.04em;margin-bottom:0.2em}
+.s4 .hero-stat{font-size:3.5cqw;font-weight:900;letter-spacing:-0.04em;color:var(--blue);line-height:1}
+.s4 .hero-stat.compact{font-size:2.35cqw;font-weight:850;line-height:1.15;letter-spacing:-0.02em}
+.s4 .hero-stat .base{color:#525252;font-weight:750}
+.s4 .hero-stat .arr{color:#8d8d8d;font-weight:400;margin:0 0.12em}
+.s4 .hero-stat .blue{color:var(--blue)}
+.s4 .hero-stat .red{color:var(--red)}
+.s4 .hero-stat .sep{color:#8d8d8d;font-weight:400;margin:0 0.12em}
+.s4 .hero-desc{font-size:1.3cqw;font-weight:700;color:#2c333a;margin-top:0.35em}
+.s4 .mid-row{display:grid;grid-template-columns:repeat(3, 1fr);gap:3.5%;align-items:flex-start;padding:1% 0}
+.s4 .mid-item{display:flex;flex-direction:column}
+.s4 .mid-title{font-size:1.45cqw;font-weight:850;color:#525252;letter-spacing:0.03em;margin-bottom:0.25em}
+.s4 .mid-stat{font-size:1.85cqw;font-weight:850;color:var(--ink);line-height:1.2}
+.s4 .mid-stat.blue{color:var(--blue)}
+.s4 .mid-note{font-size:1.25cqw;font-weight:600;color:#525252;margin-top:0.35em;line-height:1.35}
+.s4 .bottom-guardrail{background:transparent;border:0;border-top:1px solid var(--line);padding:2% 0 0;font-size:1.2cqw;color:#393939;font-weight:600;display:flex;align-items:center;gap:0.4em}
+.s4 .bottom-guardrail strong{color:var(--ink);font-weight:850;font-size:1.28cqw}
+.s4 .bottom-guardrail .dot{color:#85909b;margin:0 0.3em}
+.s4 .aside{border-left:1.5px solid var(--line);padding-left:8%;display:flex;flex-direction:column;justify-content:center;gap:6%}
+.s4 .aside .lead{font-size:2.15cqw;font-weight:700;letter-spacing:-.03em;line-height:1.55}
+.s4 .aside .lead strong{color:#171c22;font-size:2.35cqw;font-weight:900;display:block;margin-bottom:0.45em}
+.s4 .aside .smalllabel{font-size:1.2cqw;letter-spacing:.12em;color:var(--blue);font-weight:850}
 
 .attachments{position:fixed;inset:7vh 5vw 7vh;z-index:50;background:#fbfbfa;border:1px solid #c8d0d8;box-shadow:0 18px 55px #17283a35;padding:28px 32px;display:none;overflow:auto;font:14px/1.5 "IBM Plex Sans","Noto Sans TC","Microsoft JhengHei",sans-serif;color:#171c22}
 .attachments.open{display:block}.attachments-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:16px}.attachments h3{font-size:24px;margin:0 0 5px}.attachments p{margin:0;color:#66707b}.attachments-close{border:1px solid #b8c0c8;background:white;width:38px;height:34px;cursor:pointer;font-size:20px}.attachment-groups{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}.attachment-group{min-width:0}.attachment-group--brief{border-left:1px solid #d8dee3;padding-left:20px;margin-left:20px}.attachment-group-title{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:.06em;color:#4f5c68}.attachment-group-title:after{content:"";height:1px;background:#d8dee3;flex:1}.attachment-group--brief .attachment-group-title{color:#0f62fe}.attachment-group-count{font-size:11px;font-weight:500;letter-spacing:0;color:#7b8792}.attachment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;align-content:start}.attachment-link{display:flex;align-items:center;gap:10px;min-width:0;padding:11px 13px;background:white;border:1px solid #d8dee3;color:#171c22;text-decoration:none}.attachment-link span:last-child{min-width:0;overflow-wrap:anywhere}.attachment-link:hover{border-color:#0f62fe;background:#f5f8ff;color:#0f62fe}.file-badge{flex:0 0 auto;color:white;font-size:10px;font-weight:700;letter-spacing:.08em;padding:3px 6px;border-radius:2px;background:#55616d}.file-badge--pdf{background:#ac3c47}.file-badge--json{background:#0f62fe}.file-badge--txt{background:#3b5998}.file-badge--doc{background:#107c41}@media(max-width:950px){.attachment-grid{grid-template-columns:1fr}}@media(max-width:650px){.attachments{inset:3vh 3vw;padding:20px}.attachment-groups{grid-template-columns:1fr}.attachment-group--brief{border-left:0;border-top:1px solid #d8dee3;padding-left:0;margin-left:0;margin-top:22px;padding-top:18px}}
@@ -186,10 +206,7 @@
 .s7 .gt .b{font-size:1.12cqw}
 .s7 .gdh .f{font-size:1.02cqw}
 .s7 .gl{font-size:1.12cqw;line-height:1.75}
-/* slide 6 (decision lens) */
-.s4 .aside .smalllabel{font-size:0.968cqw}
-.s4 .aside .lead{font-size:2.2cqw}
-.s4 .map text[font-size="27"]{font-size:33px}
+/* slide 8 (decision lens legacy overrides removed) */
 /* V18: slide 3 — CR as same client input; concrete outputs; stage time/coin */
 .s2 .in .inrow{display:flex;align-items:center;justify-content:center;gap:3%;margin-top:2%}
 .s2 .in .inrow .large{font-size:4.2cqw;text-align:left}
@@ -350,7 +367,7 @@
 <div class="report once"><img alt="" src="images/img-03.png"/><section><div class="hd"><strong>一次性建置<em class="sub">資產與相依性 · 程式理解文件</em></strong><div class="st"><span class="sl">F–I</span><span class="tnum">130</span><span class="tunit">分鐘</span><span class="coin">🪙 66</span></div></div>
 <ul class="outs"><li><b>完整性檢查報告</b>（1,265 檔盤點）</li><li><b>435 項</b>缺漏 Mock 登記表</li><li><b>5 支</b>程式掃描資料庫</li><li><b>30 筆</b>業務詞彙表</li><li><b>2 支</b>程式說明書</li><li><b>2 張</b>邏輯流程圖</li></ul></section></div>
 <div class="report each"><img alt="" src="images/img-05.png"/><section><div class="hd"><strong>每次 CR<em class="sub">影響分析 · 修改與驗證交接</em></strong><div class="st pc"><span class="sl">J–L</span><span class="tnum">97</span><span class="tunit">分鐘</span><span class="coin">🪙 41</span></div></div>
-<ul class="outs"><li><b>影響分析報告</b>＋<b>5 張</b>關聯流程圖</li><li><b>9 項</b>風險 · <b style="color:var(--red)">1 處</b>疑似漏改</li><li><b>實施計畫</b>＋<b>1 張</b>流程圖（27 項測試）</li><li><b>1 行</b> Diff 審查記錄</li></ul></section></div>
+<ul class="outs"><li><b>影響分析報告</b>＋<b>5 張</b>關聯流程圖</li><li><b>9 項</b>風險 · <b style="color:var(--red)">1 處</b><span style="color:var(--red)">疑似漏改</span></li><li><b>實施計畫</b>＋<b>1 張</b>流程圖（27 項測試）</li><li><b>1 行</b> Diff 審查記錄</li></ul></section></div>
 </div><div class="outfoot">同時標示<span class="blue">依據與待確認範圍。</span></div>
 <div class="softfoot">時間／🪙 為第 2 頁 Runbook 各步驟實耗加總（一次性 F–I、每次 CR J–L）；流程圖共 8 張。</div></div>
 </div>
@@ -426,20 +443,58 @@
 
 <section class="slide s4">
 <div class="kicker">08 / EXECUTIVE CONFIDENCE · DECISION LENS</div>
-<h2>讓變革更有底氣，<br/>讓<span class="blue">治理更有依據。</span></h2>
-<div class="art"><div class="map"><svg aria-label="銀行高層評估長期投資時的五個面向：營運韌性、治理與驗證、投資效益、資安權限、人才傳承。中央是穩健營運、持續進化的雙重使命，而非產品功能。" class="svg" role="img" viewbox="0 0 850 465">
-<defs><pattern height="24" id="s4dots" patternunits="userSpaceOnUse" width="24"><circle cx="1" cy="1" fill="#e6eaee" r="1.1"></circle></pattern></defs>
-<rect fill="url(#s4dots)" height="465" width="850"></rect>
-<g fill="none" stroke="#a8b6c4" stroke-width="1.7"><path d="M425 218 L179 107"></path><path d="M425 218 L672 107"></path><path d="M425 218 L136 330"></path><path d="M425 218 L715 330"></path><path d="M425 218 L425 397"></path></g>
-<circle cx="425" cy="218" fill="#e8f0ff" r="103" stroke="#0f62fe" stroke-width="2.6"></circle><circle cx="425" cy="218" fill="#fff" opacity=".76" r="92"></circle>
-<text fill="#183451" font-size="27" font-weight="700" text-anchor="middle" x="425" y="214">穩健營運</text>
-<text fill="#0f62fe" font-size="27" font-weight="700" text-anchor="middle" x="425" y="247">持續進化</text>
-<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="54" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="179" y="78">營運韌性</text><text fill="#3b4d63" font-size="15" text-anchor="middle" x="179" y="103">衝擊提早掌握，變更自信推進</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="179" y="127">自信面對法規與資安急件</text></g>
-<g><rect fill="#e8f0ff" height="96" rx="7" stroke="#0f62fe" stroke-width="2" width="250" x="546" y="50"></rect><text fill="#173c72" font-size="23" font-weight="700" text-anchor="middle" x="671" y="78">治理與驗證</text><text fill="#3b4d63" font-size="15" text-anchor="middle" x="671" y="103">流程可查證，責任有把關</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="671" y="127">1 行 Diff 建議 · 專家人工審閱</text></g>
-<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="14" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="139" y="310">投資效益</text><text fill="#66707b" font-size="15" text-anchor="middle" x="139" y="335">效益與成本可以衡量</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="139" y="359">POC 實耗 167 Bobcoin</text></g>
-<g><rect fill="#fff" height="96" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="250" x="586" y="282"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="711" y="310">資安與權限</text><text fill="#66707b" font-size="15" text-anchor="middle" x="711" y="335">資料與責任可以管控</text><text fill="#0f62fe" font-size="12.5" font-weight="650" text-anchor="middle" x="711" y="359">.bobignore 隔離機密 · 推論片段零保留不訓練</text></g>
-<g><rect fill="#fff" height="90" rx="7" stroke="#b8c3ce" stroke-width="1.8" width="280" x="285" y="368"></rect><text fill="#2b3745" font-size="23" font-weight="650" text-anchor="middle" x="425" y="396">人才與知識</text><text fill="#66707b" font-size="15" text-anchor="middle" x="425" y="420">人才升級，知識留存</text><text fill="#0f62fe" font-size="13" font-weight="650" text-anchor="middle" x="425" y="443">30 筆業務資料字典 & 多張流程圖</text></g>
-</svg></div><div class="aside"><div class="smalllabel">A MORE CONFIDENT DECISION</div><div class="lead">不只看到效率。<br/><span class="blue">更看見風險、<br/>責任與長期價值。</span></div></div></div>
+<h2>POC 證明的不只是效率提升，<br/>而是核心系統變更可以<span class="blue">更快、更準，也更可治理。</span></h2>
+<div class="art">
+<div class="evidence-stage">
+  <!-- 上半部：雙核心 Hero (營運韌性 ＋ 精準) -->
+  <div class="hero-row">
+    <div class="hero-item">
+      <div class="hero-kicker">營運韌性</div>
+      <div class="hero-stat"><span class="base">10 天</span> <span class="arr">→</span> 8 小時</div>
+      <div class="hero-desc">影響分析從等待人力盤點，縮短至可進入變更決策節奏</div>
+    </div>
+    <div class="hero-item">
+      <div class="hero-kicker">精準</div>
+      <div class="hero-stat compact"><span class="blue">8 項修改</span><span class="sep">｜</span><span class="red">1 處潛在漏洞</span></div>
+      <div class="hero-desc">確認預定修改，同時揭露原先未明列的潛在風險</div>
+    </div>
+  </div>
+
+  <!-- 中半部：三大支撐要素等重並列 (治理 ＋ 知識 ＋ 投資) -->
+  <div class="mid-row">
+    <div class="mid-item">
+      <div class="mid-title">治理驗證</div>
+      <div class="mid-stat blue">6 份階段報告</div>
+      <div class="mid-note">可審閱 ｜ 人工覆核 ｜ 責任可追溯</div>
+    </div>
+    <div class="mid-item">
+      <div class="mid-title">知識資產化</div>
+      <div class="mid-stat">30 筆可重用資產</div>
+      <div class="mid-note">將業務知識留下 · 供後續持續複用</div>
+    </div>
+    <div class="mid-item">
+      <div class="mid-title">投資效益</div>
+      <div class="mid-stat">110 Bobcoin <span style="font-size:1.1cqw;font-weight:600;color:#525252">/ 核心流程</span></div>
+      <div class="mid-note">一次性建置約 70 ｜ 後續每次約 40</div>
+    </div>
+  </div>
+
+  <!-- 最底部單行 Guardrail -->
+  <div class="bottom-guardrail">
+    <strong>資安與權限 ｜ 資料與責任可控</strong>
+    <span class="dot">·</span>
+    <span>.bobignore 隔離機密 · 推論片段零保留、不訓練</span>
+  </div>
+</div>
+
+<div class="aside">
+  <div class="smalllabel">DECISION &amp; NEXT STEP</div>
+  <div class="lead">
+    <strong>POC 已證明可行；</strong>
+    <span class="blue">下一步，是決定如何把能力<br/>帶進每一次核心系統變更。</span>
+  </div>
+</div>
+</div>
 <div class="foot"><span>08 ／ 09</span></div>
 </section>
 <section class="slide s5"><div class="kicker">09 / IBM BOB + PREMIUM PACKAGE FOR Z　<strong>／ THE NEXT CHAPTER</strong></div><div class="visual-pair"><figure><h2>Change with <span class="blue">confidence.</span></h2><img alt="小白躺在積木上" src="images/img-08.png"/></figure><figure><h2>Build <span class="blue">what’s next.</span></h2><img alt="小白駕駛 PPZ 積木飛機" src="images/img-09.png"/></figure></div><div class="foot"><span>IBM Bob + PPZ</span><span>Change - Experiement - Compose - Ecosystem - Business Model</span><span>09 ／ 09</span></div></section>
