@@ -9,11 +9,9 @@ Mental Model (講者備忘錄) ｜ S 情境 → C 衝突 → R 解方
 [R] P3 數字：四大階段、1 張 CR、1,265 檔案（點附件）
 [R] P4 產出：具體成果；放大「找到 1 個漏改」
 [C] P5 後果：完整性、透明度 -> 如果今天是資安事件？ 
-[C] P6 壓力：PHP 資安事件沒人修、量子/金管會要改主機 ("完整性、透明度")-> 貴行 1 天改得完？
-So what? → Why now? → Why us?
-金管會方向 → 對銀行管理要求的合理推演 → 時間壓力 → 現有 CR gap → PPZ value
+[C] P6 壓力：金管會方向 → 須深入代碼（COBOL 加密演算法/時點盤點，舉證責任升級）→ 時間壓力 → 現有 CR gap → PPZ value
 [R] P7 Own：客戶自己用、好上手，人工把關
-[R] P8 Wrap up
+[R] P8 Wrap up *10倍 = 100人天
 [R] P9 Imagine：穩守核心，也探索機會（像 Snoopy 安穩 / 探索）
     - L1 Change 更快更安全 ｜ L2 Experiment 低成本試錯（新定價）｜ L3 Compose 帳單/支付/信用卡開 API
     - L4 Ecosystem Fintech/Partner 安全使用 ｜ L5 Biz Model 成為 game changer
