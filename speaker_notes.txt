@@ -16,3 +16,8 @@ Mental Model (講者備忘錄) ｜ S 情境 → C 衝突 → R 解方
     - L1 Change 更快更安全 ｜ L2 Experiment 低成本試錯（新定價）｜ L3 Compose 帳單/支付/信用卡開 API
     - L4 Ecosystem Fintech/Partner 安全使用 ｜ L5 Biz Model 成為 game changer
 ================================================================================
+
+補充說明：
+Q. PPZ是如何推斷 UCPCKOB 可能也要改？此外如果 CR 中沒寫出 UCPCKOBH，我們的 PPZ 找得到嗎?
+- 簡單說：靠常數搜尋可能撈到，靠關聯分析撈不到。 
+- 所以這次找到 UCPCKOB，主要是透過「UCPCKOB 標頭註解還寫著 UCPCKOBH -> UCPCKOB」
