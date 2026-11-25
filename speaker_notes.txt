@@ -3,18 +3,19 @@ IBM Bob + Premium Package for Z (PPZ) ｜ Executive Visual Story 講者備註
 ================================================================================
 
 Mental Model (講者備忘錄) ｜ S 情境 → C 衝突 → R 解方
-[S] P1 Why：第四次工業革命，AI是方向，專用 AI 是基石 (真正可執行的)
+我是誰，介紹今天目的：POC 過程、耗時、bobcoin用量、產出文件、發現
+[S] P1 Why：AI是第四次工業革命的基石，PPZ 更是主機世界的AI基石
     - 一 蒸汽/水力 -> 取代人力 ｜ 二 電力 -> 量產 ｜ 三 數位 -> 資訊化 ｜ 四 AI -> 智慧製造
 [R] P2 成績單：PoC 前約定的成功標準
-[R] P3 How：POC 完整步驟 A→M（Test Accelerator、Pipeline Automation）
-[R] P4 數字：四大階段、1 張 CR、1,265 檔案（點附件）
-[R] P5 產出：具體成果；放大「找到 1 個漏改」
-[C] P6 後果：完整性、透明度 -> 如果今天是資安事件？ 
-[C] P7 壓力：金管會方向 → 須深入代碼（COBOL 加密演算法/時點盤點，舉證責任升級）→ 時間壓力 → 現有 CR gap → PPZ value
-[R] P8 Own：客戶自己用、好上手，人工把關
+[R] P3 How：從大到小介紹（Test Accelerator、Pipeline Automation）
+[R] P4 數字：幫大家小 wrap up (前面流程有些多)
+[R] P5 產出：DL-02 ｜ 資料字典 一般AI會亂回答；另一支扣帳程式 -> 我知道貴行嚴謹有第二階段人工審核，此外這是一個小需求變更
+[C] P6 後果：但今天如果是大事情了 -> ... -> 沒人想這種事情發生 
+[C] P7 壓力：金管會方向 → 須深入代碼（COBOL 加密演算法/時點盤點，舉證責任升級）→ 時間壓力 → 現有 CR gap → PPZ value 可以幫助貴行
+[R] P8 Own：實際落地、客戶自己用
 [R] P9 Wrap up *10倍 = 100人天
 [R] P10 Imagine：穩守核心，也探索機會（像 Snoopy 安穩 / 探索）
-    - L1 Change 更快更安全 ｜ L2 Experiment 低成本試錯（新定價）｜ L3 Compose 帳單/支付/信用卡開 API
+    - L1 Change 更快更安全 ｜ L2 Experiment 低成本試錯（新定價）｜ L3 Compose 由內而外支援前方業務(如開 API )(帳單/支付/信用卡)
     - L4 Ecosystem Fintech/Partner 安全使用 ｜ L5 Biz Model 成為 game changer
 ================================================================================
 

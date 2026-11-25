@@ -1,0 +1,283 @@
+{
+  "version": "3.0.0",
+  "generatedDate": "2026-11-10",
+  "totalEntries": 30,
+  "summary": {
+    "UCPAUTO_Entries": 15,
+    "UCPCKOBH_Entries": 15,
+    "sharedEntries": 1
+  },
+  "entries": [
+    {
+      "name": "INP-TXN-DATE",
+      "shortDescription": "Input Transaction Date",
+      "businessTerm": "交易處理日期",
+      "longDescription": "Stores the transaction processing date received from the input queue or parameter area, formatted as YYMMDD, used to control batch cutoff and schedule execution dates.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "START-TIME",
+      "shortDescription": "Start Time",
+      "businessTerm": "排程啟動時間",
+      "longDescription": "Represents the target or scheduled trigger time (HHMMSS) at which automated background jobs or transaction tasks are scheduled to commence.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "QUEUE-AREA",
+      "shortDescription": "Queue Communication Area",
+      "businessTerm": "佇列通訊控制區",
+      "longDescription": "The primary data structure holding inter-task queue control metadata, transaction payloads, and dispatch status information for automated processing.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "QUEUE-TXN-ID",
+      "shortDescription": "Queue Transaction Identifier",
+      "businessTerm": "佇列交易代碼",
+      "longDescription": "Holds the 4-character CICS transaction identifier that is retrieved from or posted to the transient data / temporary storage queue for automated triggering.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "QUEUE-DELAY-TIME",
+      "shortDescription": "Queue Delay Time",
+      "businessTerm": "佇列輪詢延遲時間",
+      "longDescription": "Stores the configured delay interval duration used by task control to pause between queue polling cycles or scheduled task initiations.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "INP-START-FLAG",
+      "shortDescription": "Input Start Flag Indicator",
+      "businessTerm": "自動啟動開關旗標",
+      "longDescription": "Control flag indicator representing whether automated scheduling is active, triggered, or disabled during the current processing cycle.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "INP-START-OBGO",
+      "shortDescription": "Input Start Outbound Processing Option",
+      "businessTerm": "出埠作業啟動旗標",
+      "longDescription": "Operational switch parameter governing whether outbound batch processing (OBGO) and related automated interface tasks should be initiated.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "COMM-BCNT",
+      "shortDescription": "Communication Branch Control Area",
+      "businessTerm": "分行櫃檯控制通訊區",
+      "longDescription": "A communication record structure holding branch counter data, status indicators, and operational switches exchanged across automated branch processing routines.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "COMM-BCNT-STATUS",
+      "shortDescription": "Communication Branch Counter Status",
+      "businessTerm": "分行櫃檯處理狀態",
+      "longDescription": "Reflects the processing status (such as active, ready, or closed) of branch counter operations during automated cycle execution.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "COMM-BCNT-CLOSE",
+      "shortDescription": "Communication Branch Counter Close Indicator",
+      "businessTerm": "分行櫃檯結帳關閉旗標",
+      "longDescription": "Flag indicating whether branch counter processing has completed and is closed for further automated transactions in the current cycle.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "CKOB-AREA",
+      "shortDescription": "Check Outbound Processing Area",
+      "businessTerm": "支票出埠檢核資料區",
+      "longDescription": "Data area structure used to coordinate outbound check and payment transaction verification before automatic dispatch or printing.",
+      "scope": [
+        "UCPAUTO",
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "STUS-AREA",
+      "shortDescription": "System Status Control Area",
+      "businessTerm": "系統狀態監控控制區",
+      "longDescription": "Composite data structure containing operational status indicators, error tracking flags, and system lifecycle state information for automated tasks.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "OBGO-AREA",
+      "shortDescription": "Outbound Generation Output Area",
+      "businessTerm": "出埠產出傳輸緩衝區",
+      "longDescription": "Buffer and structure dedicated to holding outbound transaction records and control information formatted for automated transmission.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "AUTO-PRINT",
+      "shortDescription": "Automated Print Control Structure",
+      "businessTerm": "自動列印報表結構",
+      "longDescription": "Data structure containing control headers, formatting fields, and print records used for generating automated system audit logs and reports.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "ABEND-MSG",
+      "shortDescription": "Abnormal End Error Message",
+      "businessTerm": "異常終止錯誤訊息",
+      "longDescription": "Contains formatted diagnostic information, error codes, and descriptive messages logged when an unrecoverable exception or abend occurs.",
+      "scope": [
+        "UCPAUTO"
+      ]
+    },
+    {
+      "name": "NPMICR-BILL-NO",
+      "shortDescription": "MICR Bill / Check Number",
+      "businessTerm": "MICR票據與支票號碼",
+      "longDescription": "Stores the check or negotiable instrument bill number parsed from the MICR (Magnetic Ink Character Recognition) data line for outbound validation and clearing reconciliation.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "CKOB-ACC",
+      "shortDescription": "Check Outbound Customer Account Number",
+      "businessTerm": "出埠支票客戶存戶帳號",
+      "longDescription": "Identifies the core customer deposit/checking account number associated with the outbound check clearing transaction record.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "NPMICR-ACC-ID-NO",
+      "shortDescription": "MICR Account / Identification Number",
+      "businessTerm": "MICR帳戶或身分識別碼",
+      "longDescription": "The primary account identifier or customer ID encoded within the MICR data record, used for account matching and transaction routing.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "CKOB-BILL",
+      "shortDescription": "Check Outbound Bill Number Reference",
+      "businessTerm": "出埠支票票號參考值",
+      "longDescription": "Check number or bill reference number in the outbound working control area, used to locate and verify individual check transactions.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "TAT-NMICR-FILE",
+      "shortDescription": "MICR VSAM / CICS File Control Name",
+      "businessTerm": "MICR資料集CICS檔案控制名稱",
+      "longDescription": "Defines the logical file name / DD name for the MICR dataset used in EXEC CICS file control operations (READ, STARTBR, READNEXT) to retrieve check clearing records.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "OUT-TEXT",
+      "shortDescription": "Output Formatted Message Text Area",
+      "businessTerm": "輸出格式化訊息文字區",
+      "longDescription": "Working storage text area used to format output messages, status notifications, or terminal/log display lines during check processing.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "NPMICR-TXN-AMT",
+      "shortDescription": "MICR Transaction Amount",
+      "businessTerm": "MICR票面交易金額",
+      "longDescription": "Monetary transaction amount read from the MICR clearing record, representing the face value of the check to be debited or cleared.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "NPMICR-OUT-FLAG",
+      "shortDescription": "MICR Outbound Clearing Status Flag",
+      "businessTerm": "MICR出埠交換清算狀態旗標",
+      "longDescription": "Processing status indicator in the MICR record indicating whether the check item has been processed, sent outbound, or is pending clearance.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "CKOB-TXN-AMT",
+      "shortDescription": "Check Outbound Transaction Amount",
+      "businessTerm": "支票出埠累計交易金額",
+      "longDescription": "Monetary amount stored in the check outbound work area, used for total calculation, balance validation, and downstream queue dispatching.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "NPMICR-KEY",
+      "shortDescription": "MICR Record Key Structure",
+      "businessTerm": "MICR紀錄組合主鍵",
+      "longDescription": "Composite primary key for accessing the MICR dataset, consisting of account identification, bill number, and processing date fields.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "CKOB-OBQ1-CNT",
+      "shortDescription": "Outbound Queue 1 Processed Item Counter",
+      "businessTerm": "第一出埠佇列處理筆數計數器",
+      "longDescription": "Accumulated count of check transactions successfully queued into the primary outbound processing queue (OBQ1) during the current run.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "WK-M019-ACC",
+      "shortDescription": "Work Account Number for M019 Inquiry",
+      "businessTerm": "M019查詢工作帳號",
+      "longDescription": "Temporary working account variable formatted for calling the M019 balance inquiry/check verification sub-routine or service program.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "TWA-TXN-TIME",
+      "shortDescription": "Transaction Work Area Timestamp",
+      "businessTerm": "交易工作區時間戳記",
+      "longDescription": "Transaction time retrieved from CICS system services (ASKTIME/FORMATTIME) or TWA, recorded for audit trailing and batch sequencing.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "NPMICR-REC",
+      "shortDescription": "MICR Record Structure",
+      "businessTerm": "MICR票據紀錄完整資料結構",
+      "longDescription": "Full data layout for MICR check records retrieved from the database or file, containing check header, account info, amount, and clearing flags.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    },
+    {
+      "name": "CKOB-TASK-CNT",
+      "shortDescription": "Check Outbound Task Execution Counter",
+      "businessTerm": "出埠作業任務執行計數器",
+      "longDescription": "Counter tracking the number of asynchronous tasks or transactions initiated during the outbound check processing cycle.",
+      "scope": [
+        "UCPCKOBH"
+      ]
+    }
+  ]
+}
